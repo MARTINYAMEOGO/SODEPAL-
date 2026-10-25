@@ -37,7 +37,7 @@ Au Burkina Faso, beaucoup de visiteurs naviguent en 3G/4G avec des forfaits limi
 - Les formats (50 g à 1 kg) sont écrits en majuscules dans un bloc de texte au lieu d’être mis en valeur.
 
 ### Image de marque et crédibilité
-- L’adresse de contact est sur **Yahoo** (`sodepal3@yahoo.fr`) au lieu du domaine de la société (`contact@sodepalsa.com`).
+- L’adresse de contact est sur **Yahoo** (`sodepal3@yahoo.fr`) au lieu du domaine de la société. *Corrigé dans la nouvelle version : `contact@sodepal.com`.*
 - La bannière d’accueil est un montage de viennoiseries alors que le cœur de métier est la **farine infantile enrichie**. Le message principal est brouillé.
 - Les photos produits datent de mai 2020 : sachets pris sur un fond gris, sans mise en scène.
 - Il n’y a ni liens vers des réseaux sociaux, ni WhatsApp (très utilisé localement), ni points de vente.
@@ -96,7 +96,7 @@ Les polices sont *Fraunces*, un serif chaleureux pour les titres, et *Plus Jakar
 
 ## 3. À fournir par SODEPAL pour finaliser
 1. **Photos professionnelles** des produits, sur fond uni ou en situation (bol de bouillie, enfant, goûter). C’est le levier n°1 de crédibilité.
-2. **Adresse e-mail au nom de domaine**, par exemple `contact@sodepalsa.com`.
+2. ~~Adresse e-mail au nom de domaine~~ — **fait** : `contact@sodepal.com` et `y.zoundi@sodepal.com` (Direction générale) remplacent l’adresse Yahoo sur tout le site.
 3. **Numéro WhatsApp** pour ajouter un bouton de commande directe.
 4. **Points de vente et distributeurs**, au Burkina et dans la sous-région, pour une section « Où trouver nos produits ».
 5. **Le samedi est-il ouvert ?** La page indique « En semaine : 6h30–18h », et les données Google supposent du lundi au samedi : à confirmer.

@@ -92,7 +92,8 @@ On peut aussi ouvrir `index.html` directement dans un navigateur. Tout fonctionn
 
 | Je veux… | Où le faire |
 |---|---|
-| Changer le téléphone, l'e-mail ou l'adresse | Tous les `.html` (barre du haut, pied de page, Contact). Pour l'e-mail du formulaire : `js/main.js`, ligne `mailto:` |
+| Changer le téléphone, l'e-mail ou l'adresse | Tous les `.html` (barre du haut, pied de page, Contact). Les adresses utilisées sont `contact@sodepal.com` (général) et `y.zoundi@sodepal.com` (Direction générale) |
+| Changer la boîte qui reçoit le formulaire | `js/main.js`, ligne `var dest = …`. L'objet « Direction générale / presse » part vers `y.zoundi@sodepal.com`, tous les autres vers `contact@sodepal.com` |
 | Ajouter un produit | `produits.html` : copier un bloc `<article class="product" data-cat="…">`. Les catégories sont `farines`, `biscuits`, `patisserie`, `boissons` et `specialites` |
 | Ajouter une distinction | `societe.html` (section `#distinctions`) ou `fondatrice.html` : remplacer une carte `medal medal-empty` par une carte `medal` |
 | Publier une actualité | `actualites.html` : ajouter une carte `news-card` et un bloc `<article class="article" id="…">`. Penser au bloc « À la une » de l'accueil et à la barre du haut |
@@ -151,7 +152,8 @@ La liste détaillée est dans [ANALYSE.md](ANALYSE.md). Les points principaux :
 - [ ] Noms des deux nouvelles farines fortifiées lancées en 2026.
 - [ ] Ajouter les prix et trophées de SODEPAL dans l'espace **Mérites & distinctions**.
 - [ ] Numéro **WhatsApp**, pour remplacer le bouton d'appel flottant.
-- [ ] Une adresse e-mail au nom de domaine, par exemple `contact@sodepalsa.com`, à la place de l'adresse Yahoo.
+- [x] Adresses e-mail au nom de domaine : `contact@sodepal.com` (général) et `y.zoundi@sodepal.com` (Direction générale). L'adresse Yahoo n'est plus utilisée.
+- [ ] Vérifier que les boîtes `contact@sodepal.com` et `y.zoundi@sodepal.com` sont bien créées et relevées.
 - [ ] Confirmer les horaires (samedi compris ?) et le mode de retrait ou de livraison des commandes.
 - [ ] Accord de la famille Zoundi pour la publication des biographies.
 

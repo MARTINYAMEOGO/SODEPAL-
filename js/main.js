@@ -189,7 +189,9 @@
       err.hidden = true;
       var tel = form.tel.value.trim();
       var body = msg + '\n\n— ' + nom + (tel ? '\nTél. : ' + tel : '');
-      window.location.href = 'mailto:sodepal3@yahoo.fr?subject=' + encodeURIComponent(sujet.value) + '&body=' + encodeURIComponent(body);
+      // Les demandes adressées à la direction vont directement à Mme Zoundi
+      var dest = sujet.value === 'Direction générale / presse' ? 'y.zoundi@sodepal.com' : 'contact@sodepal.com';
+      window.location.href = 'mailto:' + dest + '?subject=' + encodeURIComponent(sujet.value) + '&body=' + encodeURIComponent(body);
     });
   }
 
