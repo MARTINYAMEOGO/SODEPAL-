@@ -1,0 +1,11 @@
+# Fins de ligne homogènes pour les fichiers texte
+* text=auto
+*.html text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+*.md   text eol=lf
+
+# Images
+*.webp binary
+*.png  binary
+*.jpg  binary
