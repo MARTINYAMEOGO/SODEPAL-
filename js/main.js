@@ -7,6 +7,9 @@
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var root = document.documentElement;
   var now = new Date();
+  // Textes affichés par le script : français, ou anglais sur les pages du dossier en/
+  var EN = root.lang === 'en';
+  var t = function (fr, en) { return EN ? en : fr; };
 
   // ---------- Thème clair / sombre ----------
   var themeBtn = $('.theme-toggle');
@@ -16,7 +19,7 @@
   function syncThemeBtn() {
     var dark = isDark();
     root.dataset.theme = dark ? 'dark' : 'light';
-    themeBtn.setAttribute('aria-label', dark ? 'Passer en mode clair' : 'Passer en mode sombre');
+    themeBtn.setAttribute('aria-label', dark ? t('Passer en mode clair', 'Switch to light mode') : t('Passer en mode sombre', 'Switch to dark mode'));
   }
   if (themeBtn) {
     themeBtn.addEventListener('click', function () {
@@ -31,14 +34,19 @@
   var header = $('.site-header');
   var bar = $('.progress span');
   var toTop = $('.to-top');
+  // Une seule mise à jour par image affichée, quel que soit le nombre d'événements de défilement
+  var ticking = false;
   function onScroll() {
+    ticking = false;
     var y = window.scrollY;
     var max = document.documentElement.scrollHeight - window.innerHeight;
     header.classList.toggle('scrolled', y > 8);
     if (bar) bar.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
     if (toTop) toTop.classList.toggle('show', y > 900);
   }
-  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+  }, { passive: true });
   onScroll();
 
   // ---------- Menu mobile ----------
@@ -47,15 +55,22 @@
   function closeMenu() {
     nav.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Ouvrir le menu');
+    toggle.setAttribute('aria-label', t('Ouvrir le menu', 'Open the menu'));
   }
   toggle.addEventListener('click', function () {
     var open = nav.classList.toggle('open');
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    toggle.setAttribute('aria-label', open ? t('Fermer le menu', 'Close the menu') : t('Ouvrir le menu', 'Open the menu'));
   });
   nav.addEventListener('click', function (e) { if (e.target.closest('a')) closeMenu(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+
+  // ---------- Changement de langue : rester sur la même section ----------
+  $$('.lang-switch a:not([aria-current])').forEach(function (a) {
+    a.addEventListener('click', function () {
+      if (location.hash) a.href = a.href.split('#')[0] + location.hash;
+    });
+  });
 
   // ---------- Carrousel d'accueil ----------
   var hero = $('.hero');
@@ -97,7 +112,7 @@
     var setPaused = function (p) {
       paused = p;
       pauseBtn.classList.toggle('paused', p);
-      pauseBtn.setAttribute('aria-label', p ? 'Relancer le carrousel' : 'Mettre le carrousel en pause');
+      pauseBtn.setAttribute('aria-label', p ? t('Relancer le carrousel', 'Play the carousel') : t('Mettre le carrousel en pause', 'Pause the carousel'));
       restart();
     };
     dots.forEach(function (d, k) { d.addEventListener('click', function () { show(k); }); });
@@ -119,6 +134,12 @@
       touchX = null;
     });
     document.addEventListener('visibilitychange', function () { if (document.hidden) clearTimeout(timer); else restart(); });
+    // Hors de l'écran, les animations décoratives du carrousel s'arrêtent
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        hero.classList.toggle('offscreen', !entries[0].isIntersecting);
+      }).observe(hero);
+    }
     pauseBtn.classList.toggle('paused', paused);
     show(0);
   }
@@ -188,7 +209,7 @@
       if (!nom || !msg) { err.hidden = false; (nom ? form.message : form.nom).focus(); return; }
       err.hidden = true;
       var tel = form.tel.value.trim();
-      var body = msg + '\n\n— ' + nom + (tel ? '\nTél. : ' + tel : '');
+      var body = msg + '\n\n— ' + nom + (tel ? t('\nTél. : ', '\nPhone: ') + tel : '');
       // Les demandes adressées à la direction vont directement à Mme Zoundi
       var dest = sujet.value === 'Direction générale / presse' ? 'y.zoundi@sodepal.com' : 'contact@sodepal.com';
       window.location.href = 'mailto:' + dest + '?subject=' + encodeURIComponent(sujet.value) + '&body=' + encodeURIComponent(body);
@@ -200,7 +221,7 @@
   var closeAt = now.getUTCDay() === 0 ? 14 * 60 : 18 * 60;
   var isOpen = mins >= 6 * 60 + 30 && mins < closeAt;
   $$('.open-now').forEach(function (badge) {
-    badge.textContent = isOpen ? '● Ouvert maintenant' : '● Fermé · ouvre à 6h30';
+    badge.textContent = isOpen ? t('● Ouvert maintenant', '● Open now') : t('● Fermé · ouvre à 6h30', '● Closed · opens 6:30 am');
     badge.classList.add(isOpen ? 'is-open' : 'is-closed');
     badge.hidden = false;
   });

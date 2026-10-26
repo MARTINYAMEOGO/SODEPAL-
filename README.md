@@ -34,6 +34,8 @@ Proposition de refonte du site de **SODEPAL SA** (Société d'exploitation des p
 | Actualités | `actualites.html` | Extension de l'usine avec le PAM (6 mars 2026), ISO 22000, portrait de la fondatrice, JAAL 2025 |
 | Contact | `contact.html` | Coordonnées, formulaire, carte, « Comment commander », FAQ |
 
+**Version anglaise** : les 8 pages existent aussi en anglais dans le dossier `en/`, avec les mêmes noms de fichiers (`en/index.html`, `en/produits.html`…). Le bouton **FR / EN** de la barre du haut ouvre la même page dans l'autre langue et garde la section en cours. Les moteurs de recherche sont informés des deux versions par les balises `hreflang`.
+
 ---
 
 ## Fonctionnalités
@@ -49,7 +51,7 @@ Proposition de refonte du site de **SODEPAL SA** (Société d'exploitation des p
 - **Compteurs animés**, apparitions au défilement, barre de progression de lecture, bouton d'appel flottant, retour en haut.
 - **Référencement** : titre et description propres à chaque page, aperçu pour les réseaux sociaux (Open Graph), données structurées schema.org sur l'accueil, textes alternatifs sur toutes les images.
 - **Accessibilité** : lien « Aller au contenu », navigation au clavier, contour de focus visible, contrastes vérifiés.
-- **Performance** : moins de 1 Mo d'images en WebP pour tout le site (contre 5,8 Mo sur le site actuel), avec chargement différé.
+- **Performance** : moins de 1 Mo d'images en WebP pour tout le site (contre 5,8 Mo sur le site actuel), avec chargement différé. Logo de 8 Ko, une seule graisse pour la police italique, animations limitées à `transform` et `opacity` (elles ne redessinent pas la page), et animations du carrousel arrêtées quand il sort de l'écran.
 
 ---
 
@@ -59,6 +61,7 @@ Proposition de refonte du site de **SODEPAL SA** (Société d'exploitation des p
 .
 ├── index.html, societe.html, fondatrice.html, directrice.html,
 │   produits.html, qualite.html, actualites.html, contact.html
+├── en/                  les mêmes 8 pages en anglais
 ├── css/style.css        styles communs (couleurs, thème sombre, mise en page mobile)
 ├── js/main.js           interactions communes à toutes les pages
 ├── js/saisons.js        temps forts de l'année (dates, textes, décors)
@@ -72,7 +75,9 @@ Proposition de refonte du site de **SODEPAL SA** (Société d'exploitation des p
 └── README.md
 ```
 
-> L'**en-tête** (barre d'information et menu) et le **pied de page** sont copiés à l'identique dans chacune des 8 pages. Toute modification du menu, du téléphone ou de l'adresse doit être reportée dans **tous les fichiers `.html`**. Un « Rechercher / Remplacer » dans le dossier suffit.
+> L'**en-tête** (barre d'information et menu) et le **pied de page** sont copiés à l'identique dans chacune des 8 pages. Toute modification du menu, du téléphone ou de l'adresse doit être reportée dans **tous les fichiers `.html`**, y compris ceux du dossier `en/`. Un « Rechercher / Remplacer » dans le dossier suffit.
+>
+> Toute modification de contenu faite sur une page française doit aussi être faite sur la page anglaise du même nom. Dans le formulaire de contact anglais, les options gardent leur valeur en français (`value="Commande de farines"`) : l'objet des e-mails reçus reste ainsi en français pour l'équipe.
 
 ---
 

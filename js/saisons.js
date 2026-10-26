@@ -109,6 +109,79 @@
     }
   ];
 
+  // Textes des pages anglaises (dossier en/), mêmes clés que ci-dessus
+  var ANGLAIS = {
+    korite: {
+      ruban: 'Happy Eid al-Fitr! Eid Mubarak to every family', eyebrow: 'Korité · Eid al-Fitr',
+      titre: 'Eid <em>Mubarak</em>', accent: 'to every family',
+      texte: 'Cakes, biscuits and party bites to welcome family and friends: our pastry chefs are preparing your celebration orders.',
+      bouton: 'Order for the celebration'
+    },
+    tabaski: {
+      ruban: 'Happy Tabaski! Cakes and biscuits to welcome your loved ones', eyebrow: 'Tabaski · Eid al-Adha',
+      titre: 'Happy <em>Tabaski</em>', accent: 'to every family',
+      texte: 'To welcome your loved ones, try our cakes, biscuits and Toedo sweets. Order a few days before the celebration.',
+      bouton: 'Order for the celebration'
+    },
+    noel: {
+      ruban: 'Christmas is coming: order your cakes and festive treats', eyebrow: 'Christmas · Orders open',
+      titre: 'A Christmas <em>full</em> of treats', accent: 'made in Burkina',
+      texte: 'Festive cakes, biscuits and Toedo sweets for the whole family. Order early to be sure of getting yours in time.',
+      bouton: 'Order for Christmas'
+    },
+    'nouvel-an': {
+      ruban: 'Happy New Year {annee}! Party bites and biscuits for your receptions', eyebrow: 'New Year',
+      titre: 'Happy <em>New</em> Year', accent: '{annee}',
+      texte: 'Everyone at SODEPAL sends you their best wishes. For your receptions, think of our party bites and biscuits.',
+      bouton: 'Request a quote'
+    },
+    paques: {
+      ruban: 'Happy Easter! Cakes and treats for your festive meals', eyebrow: 'Easter',
+      titre: 'Happy <em>Easter</em>', accent: 'with family',
+      texte: 'Festive cakes, biscuits and Toedo sweets for Easter lunch and for the children. Remember to order in advance.',
+      bouton: 'Order for Easter'
+    },
+    maouloud: {
+      ruban: 'Happy Mawlid to the whole Muslim community', eyebrow: 'Maouloud · Mawlid',
+      titre: 'Happy <em>Mawlid</em>', accent: 'peace and sharing',
+      texte: 'SODEPAL wishes every family a happy Mawlid. For your evening gatherings and guests: biscuits, sweets and pastries.',
+      bouton: 'See our biscuits'
+    },
+    ramadan: {
+      ruban: 'Ramadan Mubarak: biscuits and treats for breaking the fast', eyebrow: 'Month of Ramadan',
+      titre: 'Ramadan <em>Mubarak</em>', accent: 'to every family',
+      texte: 'To break the fast, enjoy our biscuits, Toedo sweets and pastries. Order ahead for your family meals.',
+      bouton: 'See our biscuits'
+    },
+    careme: {
+      ruban: 'Wishing everyone a blessed Lent', eyebrow: 'Lent',
+      titre: 'Sharing <em>what</em> matters', accent: 'as a family',
+      texte: 'During Lent, our flours and biscuits go with simple, nourishing meals for the whole family.',
+      bouton: 'See our products'
+    },
+    femmes: {
+      ruban: '8 March: happy International Women’s Day', eyebrow: '8 March · International Women’s Day',
+      titre: 'A company <em>founded</em> by a woman', accent: 'since 1991',
+      texte: 'Founded by Simone Zoundi and now led by Yolande Alexise Zoundi, SODEPAL salutes all the women who drive Burkina Faso’s food industry.',
+      bouton: 'Meet our founder'
+    },
+    'saint-valentin': {
+      ruban: 'Valentine’s Day: give a cake made by our pastry chefs', eyebrow: '14 February · Valentine’s Day',
+      titre: 'Say it <em>with</em> a cake', accent: 'made with love',
+      texte: 'Personalised cakes and treats to give: order a few days ahead for 14 February.',
+      bouton: 'Order a cake'
+    },
+    rentree: {
+      ruban: 'Back to school: nourishing snacks for pupils', eyebrow: 'Back to school',
+      titre: 'Well <em>fed</em> to learn well', accent: 'have a great year!',
+      texte: 'Bisdelice with moringa, vanilla and sesame biscuits: snacks to slip into the school bag. Retailers and school canteens: contact us for large quantities.',
+      bouton: 'See our biscuits'
+    }
+  };
+
+  var EN = document.documentElement.lang === 'en';
+  function textes(s) { return EN && ANGLAIS[s.id] ? ANGLAIS[s.id] : s; }
+
   var MAX = 3;
   var JOUR = 864e5;
 
@@ -314,10 +387,10 @@
     var ruban = document.createElement('div');
     ruban.className = 'ruban saison-' + s0.id;
     ruban.setAttribute('role', 'region');
-    ruban.setAttribute('aria-label', 'Temps fort du moment');
+    ruban.setAttribute('aria-label', EN ? 'Seasonal news' : 'Temps fort du moment');
     ruban.innerHTML = '<div class="wrap ruban-inner"><span class="ruban-ico">' + icone(s0.id) + '</span>' +
-      '<a href="' + s0.lien + '">' + txt(s0.ruban) + '</a>' +
-      '<button class="ruban-close" type="button" aria-label="Masquer ce message">×</button></div>';
+      '<a href="' + s0.lien + '">' + txt(textes(s0).ruban) + '</a>' +
+      '<button class="ruban-close" type="button" aria-label="' + (EN ? 'Hide this message' : 'Masquer ce message') + '">×</button></div>';
     ruban.querySelector('.ruban-close').addEventListener('click', function () {
       ruban.remove();
       try { sessionStorage.setItem(cle, '1'); } catch (e) {}
@@ -331,16 +404,17 @@
   var conteneur = hero.querySelector('.slides');
   var points = hero.querySelector('.dots');
   actives.slice().reverse().forEach(function (s) {
+    var L = textes(s);
     var slide = document.createElement('article');
     slide.className = 'slide slide-saison saison-' + s.id;
     slide.setAttribute('aria-roledescription', 'diapositive');
     slide.innerHTML =
       '<div class="slide-bg slide-bg-saison" aria-hidden="true"><svg class="saison-motif" viewBox="0 0 600 600" aria-hidden="true">' + MOTIFS[s.id]() + '</svg></div>' +
       '<div class="wrap slide-content">' +
-        '<p class="eyebrow eyebrow-light">' + s.eyebrow + '</p>' +
-        '<p class="display">' + txt(s.titre) + ' <span class="accent">' + txt(s.accent) + '</span></p>' +
-        '<p class="slide-lead">' + s.texte + '</p>' +
-        '<div class="slide-cta"><a class="btn btn-corn" href="' + s.lien + '">' + s.bouton +
+        '<p class="eyebrow eyebrow-light">' + L.eyebrow + '</p>' +
+        '<p class="display">' + txt(L.titre) + ' <span class="accent">' + txt(L.accent) + '</span></p>' +
+        '<p class="slide-lead">' + L.texte + '</p>' +
+        '<div class="slide-cta"><a class="btn btn-corn" href="' + s.lien + '">' + L.bouton +
           ' <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>' +
       '</div>';
     conteneur.insertBefore(slide, conteneur.firstChild);
@@ -351,10 +425,10 @@
   Array.prototype.forEach.call(slides, function (sl, i) {
     sl.classList.toggle('is-active', i === 0);
     sl.setAttribute('aria-hidden', String(i !== 0));
-    sl.setAttribute('aria-label', (i + 1) + ' sur ' + total);
+    sl.setAttribute('aria-label', (i + 1) + (EN ? ' of ' : ' sur ') + total);
   });
   Array.prototype.forEach.call(points.querySelectorAll('button'), function (b, i) {
-    b.setAttribute('aria-label', 'Diapositive ' + (i + 1));
+    b.setAttribute('aria-label', (EN ? 'Slide ' : 'Diapositive ') + (i + 1));
   });
   var compteur = hero.querySelector('.counter > span:last-child');
   if (compteur) compteur.textContent = String(total).padStart(2, '0');
