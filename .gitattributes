@@ -9,3 +9,6 @@
 *.webp binary
 *.png  binary
 *.jpg  binary
+.htaccess text eol=lf
+_headers text eol=lf
+*.txt text eol=lf
