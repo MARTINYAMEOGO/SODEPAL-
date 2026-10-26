@@ -11,13 +11,13 @@
   --corn-soft: #FCEFC9;
   --millet: #7A4B2A;
 
-  --bg: #FBF7EE;
+  --bg: #FFFFFF;
   --surface: #FFFFFF;
-  --tint: #F3ECDC;
+  --tint: #F4F5F3;
   --text: #1C2A20;
   --heading: #12371D;
   --muted: #5A6A5E;
-  --line: #E4DCC8;
+  --line: #E2E4E0;
   --primary: #1F5A2E;
   --primary-hover: #12371D;
   --on-primary: #FFFFFF;
@@ -128,8 +128,10 @@ svg { flex: none; }
 .topbar a:hover { color: var(--corn); }
 .topbar svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .topbar-links { display: flex; gap: 1.25rem; }
-.topbar-news { margin: 0; display: flex; align-items: center; gap: .5rem; font-weight: 600; color: var(--corn); }
-.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--corn); animation: pulse 2s infinite; }
+.topbar-news { margin: 0; display: flex; align-items: center; gap: .5rem; font-weight: 600; color: var(--corn); min-width: 0; }
+.topbar-news a { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.topbar-links a, .open-now { white-space: nowrap; }
+.dot { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--corn); animation: pulse 2s infinite; }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(242, 182, 50, .6); } 70% { box-shadow: 0 0 0 8px rgba(242, 182, 50, 0); } 100% { box-shadow: 0 0 0 0 rgba(242, 182, 50, 0); } }
 .topbar-right { display: flex; align-items: center; gap: .75rem; }
 .open-now { font-size: .75rem; font-weight: 700; padding: .2rem .65rem; border-radius: 999px; }

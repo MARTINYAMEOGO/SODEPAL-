@@ -114,7 +114,9 @@ Pour garder un site léger, il faut **convertir les nouvelles photos en WebP**, 
 | Vert feuille (accents) | `#7DB343` |
 | Jaune maïs (accents, chiffres) | `#F2B632` |
 | Brun mil (intitulés) | `#7A4B2A` |
-| Fond crème | `#FBF7EE` |
+| Fond de page (blanc) | `#FFFFFF` |
+| Fond des sections alternées (blanc grisé) | `#F4F5F3` |
+| Bordures | `#E2E4E0` |
 
 Les couleurs reprennent le logo et les matières premières : la feuille, le maïs et le petit mil.
 
