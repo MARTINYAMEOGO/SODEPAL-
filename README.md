@@ -25,7 +25,7 @@ Proposition de refonte du site de **SODEPAL SA** (Société d'exploitation des p
 
 | Page | Fichier | Contenu |
 |---|---|---|
-| Accueil | `index.html` | Carrousel en 4 diapositives, bloc « À la une » sur l'extension de l'usine (2026), gammes, présentation, dirigeantes, publics, qualité, appel final |
+| Accueil | `index.html` | Carrousel en 4 diapositives (plus celle du temps fort du moment), bandeau d'engagements, bloc « À la une » sur l'extension de l'usine (2026), univers, présentation, « Une entreprise familiale depuis 1991 », publics, qualité, « Ils parlent de nous », appel final |
 | La société | `societe.html` | Qui sommes-nous, Directrice générale, parcours, mission / objectif / valeurs, chaîne des acteurs, équipe, **mérites & distinctions**, partenaires, recrutement |
 | La fondatrice | `fondatrice.html` | Simone Zoundi née Kafando : portrait, parcours de 1968 à 2026, organisations, décorations, sources |
 | La Directrice générale | `directrice.html` | Yolande Alexise Zoundi : portrait, mot de la Directrice générale, grands chantiers, parcours |
@@ -42,6 +42,7 @@ Proposition de refonte du site de **SODEPAL SA** (Société d'exploitation des p
 - **Thème clair / sombre** : il suit le réglage de l'appareil, et le choix du visiteur est mémorisé.
 - **Menu** avec sous-menus « La société » et « Produits ». Sur mobile, il s'ouvre en panneau.
 - **Carrousel d'accueil** : défilement automatique, pause, flèches du clavier, balayage au doigt. Il reste à l'arrêt si le visiteur a demandé de réduire les animations.
+- **Temps forts de l'année** : Noël, Nouvel An, Saint-Valentin, 8 mars, carême, Ramadan, Korité, Pâques, Tabaski, Maouloud et rentrée scolaire. Pendant chaque période, un ruban s'affiche en haut de toutes les pages et une diapositive à ses couleurs, avec son propre décor, passe en tête du carrousel. Tout se règle dans `js/saisons.js`.
 - **Catalogue filtrable**, avec un lien direct vers une gamme : `produits.html#farines`, `#biscuits`, `#patisserie`, `#boissons`, `#specialites`.
 - **Formulaire de contact** qui ouvre la messagerie du visiteur avec le message déjà rédigé. L'objet peut être pré-rempli par l'adresse, par exemple `contact.html?sujet=Devenir%20revendeur`.
 - **Indicateur « Ouvert / Fermé »** en direct, calculé à l'heure de Ouagadougou.
@@ -60,6 +61,7 @@ Proposition de refonte du site de **SODEPAL SA** (Société d'exploitation des p
 │   produits.html, qualite.html, actualites.html, contact.html
 ├── css/style.css        styles communs (couleurs, thème sombre, mise en page mobile)
 ├── js/main.js           interactions communes à toutes les pages
+├── js/saisons.js        temps forts de l'année (dates, textes, décors)
 ├── assets/
 │   ├── img/             images optimisées utilisées par le site (WebP, PNG)
 │   └── originaux/       photos d'origine récupérées sur le site actuel
@@ -100,6 +102,8 @@ On peut aussi ouvrir `index.html` directement dans un navigateur. Tout fonctionn
 | Ajouter une photo de l'équipe | Placer l'image dans `assets/img/equipe/`, puis ajouter `<img src="…" alt="…">` dans le bloc `.m-photo`, `.portrait` ou `.dg-photo` concerné |
 | Changer les horaires | `contact.html`, FAQ, données schema.org de `index.html`, et le calcul « Ouvert / Fermé » dans `js/main.js` |
 | Changer les couleurs | Variables en haut de `css/style.css` (`:root`) |
+| Activer, couper ou modifier un temps fort (Noël, Ramadan…) | Liste `SAISONS` en haut de `js/saisons.js` : `actif: false` pour couper, `debut`/`fin` pour les dates fixes, `dates` par année pour les fêtes du calendrier lunaire. Pâques et le carême se calculent seuls |
+| Voir un temps fort avant sa date | Ajouter `?saison=` à l'adresse, par exemple `index.html?saison=noel`, `?saison=ramadan` ou `?saison=tabaski` |
 
 Pour garder un site léger, il faut **convertir les nouvelles photos en WebP**, en 900 px de large au plus. Un outil en ligne comme Squoosh suffit.
 
@@ -156,6 +160,7 @@ La liste détaillée est dans [ANALYSE.md](ANALYSE.md). Les points principaux :
 - [ ] Numéro **WhatsApp**, pour remplacer le bouton d'appel flottant.
 - [x] Adresses e-mail au nom de domaine : `contact@sodepal.com` (général) et `y.zoundi@sodepal.com` (Direction générale). L'adresse Yahoo n'est plus utilisée.
 - [ ] Vérifier que les boîtes `contact@sodepal.com` et `y.zoundi@sodepal.com` sont bien créées et relevées.
+- [ ] Chaque année, ajuster dans `js/saisons.js` les dates de Ramadan, Korité, Tabaski et Maouloud dès leur annonce officielle (celles de 2027 et 2028 sont indicatives).
 - [ ] Confirmer les horaires (samedi compris ?) et le mode de retrait ou de livraison des commandes.
 - [ ] Accord de la famille Zoundi pour la publication des biographies.
 

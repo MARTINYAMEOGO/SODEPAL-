@@ -234,7 +234,7 @@
         if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); }
       });
     }, { threshold: 0.12 });
-    $$('.section-head, .range, .about-visual, .about-text, .segment, .steps li, .q-list li, .faq-list, .contact-side, .contact-form, .timeline li, .mvv article, .chain li, .member, .partner, .join, .lab-visual, .lab-text').forEach(function (el, i) {
+    $$('.section-head, .range, .about-visual, .about-text, .segment, .steps li, .q-list li, .faq-list, .contact-side, .contact-form, .timeline li, .mvv article, .chain li, .member, .partner, .join, .lab-visual, .lab-text, .press-card, .family-steps li, .leader').forEach(function (el, i) {
       el.classList.add('reveal');
       el.style.transitionDelay = (i % 4) * 80 + 'ms';
       io.observe(el);
