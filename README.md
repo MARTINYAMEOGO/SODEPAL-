@@ -16,8 +16,9 @@ Proposition de refonte du site de **SODEPAL SA** (Société d'exploitation des p
 5. [Modifier le contenu](#modifier-le-contenu)
 6. [Charte graphique](#charte-graphique)
 7. [Mise en ligne](#mise-en-ligne)
-8. [Avant la mise en ligne](#avant-la-mise-en-ligne)
-9. [Sources](#sources)
+8. [Sécurité](#sécurité)
+9. [Avant la mise en ligne](#avant-la-mise-en-ligne)
+10. [Sources](#sources)
 
 ---
 
@@ -140,12 +141,39 @@ Les couleurs reprennent le logo et les matières premières : la feuille, le ma�
 
 ## Mise en ligne
 
-C'est un site statique : il suffit de copier tous les fichiers (sauf `archives/` et `assets/originaux/`, inutiles en ligne) chez n'importe quel hébergeur web. Par exemple :
+C'est un site statique : il suffit de copier tous les fichiers (sauf `archives/` et `assets/originaux/`, inutiles en ligne), **y compris `.htaccess` et `.well-known/`**, chez n'importe quel hébergeur web. Par exemple :
 - l'hébergement actuel de sodepalsa.com, en remplacement de WordPress ;
 - Netlify ou Cloudflare Pages, qui sont gratuits et se branchent sur ce dépôt GitHub ;
 - GitHub Pages, à condition que le dépôt soit public ou que le compte ait une offre payante.
 
 Le formulaire de contact n'envoie rien lui-même : il ouvre la messagerie du visiteur. Pour un envoi direct, il faut brancher un service de formulaires (Formspree, Netlify Forms…) ou un petit script chez l'hébergeur.
+
+---
+
+## Sécurité
+
+Le site est **statique** : il n'a ni base de données, ni code côté serveur, ni espace de connexion. L'**injection SQL est donc impossible**, et aucune donnée saisie par un visiteur n'est enregistrée ou réaffichée. Le formulaire de contact ouvre la messagerie du visiteur et n'envoie rien lui-même.
+
+Protections en place :
+
+| Risque | Protection |
+|---|---|
+| Injection de script (XSS) | Politique de sécurité du contenu (CSP) dans chaque page : seuls les scripts du site s'exécutent, un script injecté est bloqué. Les paramètres d'adresse (`?sujet=`, `?saison=`) ne sont jamais réaffichés tels quels |
+| Site affiché dans le cadre d'un autre site (clickjacking) | `frame-ancestors 'none'` et `X-Frame-Options: DENY` (en-têtes serveur) |
+| Ressources externes piégées | Seuls Google Fonts et la carte Google sont autorisés. La carte est isolée dans un bac à sable (`sandbox`) |
+| Liens externes | `rel="noopener"` sur tous les liens qui ouvrent un nouvel onglet |
+| Fichiers privés exposés | `.htaccess` renvoie une erreur 404 pour `.git`, les notes `.md`, `archives/` et `assets/originaux/`, et interdit la liste des dossiers |
+| Connexion non chiffrée | Redirection vers HTTPS et en-tête HSTS |
+| Fuite d'informations | `Referrer-Policy`, `Permissions-Policy` (caméra, micro, position désactivés), `X-Content-Type-Options` |
+
+Fichiers à envoyer chez l'hébergeur avec le site :
+- **`.htaccess`** pour un hébergement Apache ou LiteSpeed (cas le plus courant, comme l'hébergement WordPress actuel) ;
+- **`_headers`** à la place, pour Netlify ou Cloudflare Pages ;
+- **`.well-known/security.txt`**, qui indique où signaler une faille.
+
+> Si le petit script du thème clair / sombre (en haut de chaque page) est modifié, son empreinte `sha256-…` doit être recalculée dans la CSP des pages, de `.htaccess` et de `_headers`, sinon il sera bloqué.
+
+Le site WordPress actuel (sodepalsa.com) n'est pas concerné par ces protections. Tant qu'il reste en ligne, il faut tenir à jour WordPress, son thème et ses extensions.
 
 ---
 

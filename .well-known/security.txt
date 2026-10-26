@@ -1,0 +1,6 @@
+# Signaler une faille de sécurité sur le site de SODEPAL SA
+# Report a security vulnerability on the SODEPAL SA website
+Contact: mailto:contact@sodepal.com
+Expires: 2027-10-31T00:00:00.000Z
+Preferred-Languages: fr, en
+Canonical: https://www.sodepalsa.com/.well-known/security.txt

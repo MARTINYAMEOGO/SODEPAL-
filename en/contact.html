@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Sécurité : seules les ressources du site, Google Fonts et la carte Google sont autorisées -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-MTEEXbNExdr9AhDRRspBK4SX+36P5CUIj0HhfWTKv5A='; style-src 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Contact and orders: Zogona, Ouagadougou | SODEPAL SA</title>
   <meta name="description" content="Contact SODEPAL SA in Zogona, Ouagadougou: phone +226 25 36 10 82, email or contact form. How to order, opening hours and answers to common questions.">
   <link rel="canonical" href="https://www.sodepalsa.com/en/contact.html">
@@ -183,7 +186,7 @@
     <section class="section" aria-label="How to find us">
       <div class="wrap">
         <div class="map">
-          <iframe src="https://www.google.com/maps?q=Zogona%2C%20Ouagadougou&amp;output=embed" title="Map: SODEPAL in Zogona, Ouagadougou" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps?q=Zogona%2C%20Ouagadougou&amp;output=embed" title="Map: SODEPAL in Zogona, Ouagadougou" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
         </div>
       </div>
     </section>
