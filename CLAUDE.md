@@ -24,6 +24,7 @@ Dernière mise à jour : 5 novembre 2026.
 5. **Titre d'onglet** : « SODEPAL SA » seul sur toutes les pages. Le titre détaillé reste dans `og:title`.
 6. **E-mails** : `contact@sodepal.com` (général) et `y.zoundi@sodepal.com` (direction). Ne plus utiliser Yahoo.
 7. **Petits intitulés** (`.eyebrow`) : pas de tiret jaune devant, retiré à la demande de l'utilisateur.
+8. **Citations et chiffres** : pas de bande jaune à gauche. Les citations sont sur un fond vert pâle (`.news-quote`, `.founder-quote`), les chiffres clés d'un article sont des cartes (`.facts`).
 
 ## Règles de contenu
 
