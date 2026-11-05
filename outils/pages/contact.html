@@ -1,0 +1,134 @@
+    <section class="page-hero">
+      <div class="page-hero-bg" aria-hidden="true"><img src="assets/img/hero-canapes.webp" alt="" width="960" height="640"></div>
+      <div class="wrap">
+        <ol class="crumbs"><li><a href="index.html">Accueil</a></li><li aria-current="page">Contact</li></ol>
+        <h1>Parlons de <em>votre</em> projet</h1>
+        <p class="lead">Commande, partenariat, candidature ou réclamation : notre équipe vous répond aux heures d’ouverture.</p>
+      </div>
+      <p class="hero-outline" aria-hidden="true">À VOTRE ÉCOUTE</p>
+    </section>
+
+    <section class="section section-tint" id="contact">
+      <div class="wrap contact">
+        <div class="contact-side">
+          <p class="eyebrow">Nous joindre</p>
+          <h2 class="h-big">Un service <em>proche</em> de vous</h2>
+          <p>Appelez-nous, écrivez-nous ou passez nous voir à Zogona.</p>
+          <div class="contact-cards">
+            <a class="ci" href="tel:+22625361082">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 006 6L16 13l5 2v4a2 2 0 01-2 2A16 16 0 013 5a2 2 0 012-2z"/></svg>
+              <span><small>Téléphone</small>+226 25 36 10 82</span>
+            </a>
+            <a class="ci" href="mailto:contact@sodepal.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              <span><small>E-mail</small>contact@sodepal.com</span>
+            </a>
+            <a class="ci" href="https://www.google.com/maps/search/?api=1&amp;query=Zogona%2C+Ouagadougou" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              <span><small>Adresse</small>Zogona, Rue 13.24, Porte 570, Ouagadougou</span>
+            </a>
+            <div class="ci">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <span><small>Horaires</small>Semaine 6h30 – 18h · Dimanche 6h30 – 14h</span>
+            </div>
+            <a class="ci ci-wide" href="mailto:y.zoundi@sodepal.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>
+              <span><small>Direction générale · Mme Yolande Zoundi</small>y.zoundi@sodepal.com</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="form-contact" novalidate>
+          <h3>Envoyer un message</h3>
+          <div class="field">
+            <label for="f-nom">Nom complet <span aria-hidden="true">*</span></label>
+            <input id="f-nom" name="nom" autocomplete="name" placeholder="Votre nom" required>
+          </div>
+          <div class="field">
+            <label for="f-tel">Téléphone</label>
+            <input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" placeholder="+226 …">
+          </div>
+          <div class="field field-full">
+            <label for="f-sujet">Objet</label>
+            <select id="f-sujet" name="sujet">
+              <optgroup label="Commandes">
+                <option>Commande de farines</option>
+                <option>Commande de biscuits ou confiseries</option>
+                <option>Commande de pâtisserie</option>
+              </optgroup>
+              <optgroup label="Partenariats">
+                <option>Devenir revendeur</option>
+                <option>Partenariat nutrition</option>
+              </optgroup>
+              <optgroup label="Emploi">
+                <option>Candidature spontanée</option>
+                <option>Demande de stage</option>
+              </optgroup>
+              <optgroup label="Direction">
+                <option>Direction générale / presse</option>
+              </optgroup>
+              <optgroup label="Service client">
+                <option>Réclamation / avis</option>
+                <option>Autre demande</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="field field-full">
+            <label for="f-msg">Message <span aria-hidden="true">*</span></label>
+            <textarea id="f-msg" name="message" rows="5" placeholder="Produits, quantités, date souhaitée…" required></textarea>
+          </div>
+          <div class="field-full form-foot">
+            <button class="btn" type="submit">Envoyer le message <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <p class="form-hint">Le message s’ouvre dans votre application e-mail.</p>
+          </div>
+          <p class="form-error field-full" role="alert" hidden>Merci d’indiquer votre nom et votre message.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Carte -->
+    <section class="section" aria-label="Plan d’accès">
+      <div class="wrap">
+        <div class="map">
+          <iframe src="https://www.google.com/maps?q=Zogona%2C%20Ouagadougou&amp;output=embed" title="Carte : SODEPAL à Zogona, Ouagadougou" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comment commander -->
+    <section class="section section-tint" id="commander">
+      <div class="wrap">
+        <header class="section-head center">
+          <p class="eyebrow">Simple et rapide</p>
+          <h2 class="h-big">Comment <em>commander</em> chez SODEPAL</h2>
+        </header>
+        <ol class="steps">
+          <li><span class="step-num">01</span><span class="step-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></span><h3>Choisissez</h3><p>Parcourez nos <a href="produits.html">produits</a> et notez les formats souhaités.</p></li>
+          <li><span class="step-num">02</span><span class="step-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 006 6L16 13l5 2v4a2 2 0 01-2 2A16 16 0 013 5a2 2 0 012-2z"/></svg></span><h3>Contactez-nous</h3><p>Par téléphone, par e-mail ou via le formulaire, aux heures d’ouverture.</p></li>
+          <li><span class="step-num">03</span><span class="step-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><h3>Confirmez</h3><p>Nous validons ensemble les quantités, les formats et la date souhaitée.</p></li>
+          <li><span class="step-num">04</span><span class="step-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><h3>Récupérez</h3><p>Votre commande vous attend à Zogona, Ouagadougou.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="wrap faq">
+        <header class="section-head">
+          <p class="eyebrow">Questions fréquentes</p>
+          <h2 class="h-big">Vous avez <em>une</em> question&nbsp;?</h2>
+          <p>Les réponses aux questions que l’on nous pose le plus souvent. Pour le reste, appelez-nous.</p>
+          <a class="btn" href="tel:+22625361082">+226 25 36 10 82</a>
+        </header>
+        <div class="faq-list">
+          <details open><summary>Où se trouve SODEPAL&nbsp;?</summary><p>Nos locaux sont à Zogona, Ouagadougou, Rue 13.24, Porte 570. <a href="https://www.google.com/maps/search/?api=1&amp;query=Zogona%2C+Ouagadougou" target="_blank" rel="noopener">Voir l’itinéraire</a>.</p></details>
+          <details><summary>Dans quels formats sont vendues vos farines&nbsp;?</summary><p>Vitaline et Vita Casui sont disponibles en 50 g, 100 g, 400 g, 500 g et 1 kg.</p></details>
+          <details><summary>Vos farines sont-elles certifiées&nbsp;?</summary><p>Oui, nos farines enrichies sont certifiées NBF. Toute notre production suit les règles HACCP et est contrôlée dans notre laboratoire.</p></details>
+          <details><summary>Comment conserver les farines&nbsp;?</summary><p>À conserver dans un endroit aéré et sec.</p></details>
+          <details><summary>Comment commander un gâteau pour un événement&nbsp;?</summary><p>Contactez-nous par téléphone ou via le formulaire en choisissant « Commande de pâtisserie » : indiquez la date, le nombre de personnes et vos idées.</p></details>
+          <details><summary>Puis-je devenir revendeur de vos produits&nbsp;?</summary><p>Oui. Nos produits sont distribués sur le marché national et sous-régional. Écrivez-nous en choisissant « Devenir revendeur ».</p></details>
+          <details><summary>Proposez-vous des stages&nbsp;?</summary><p>Vous pouvez nous adresser une demande de stage ou une candidature spontanée via le formulaire ci-dessus.</p></details>
+          <details><summary>Quels sont vos horaires&nbsp;?</summary><p>En semaine de 6h30 à 18h, le dimanche de 6h30 à 14h.</p></details>
+        </div>
+      </div>
+    </section>

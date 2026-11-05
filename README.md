@@ -72,11 +72,13 @@ Proposition de refonte du site de **SODEPAL SA** (Société d'exploitation des p
 ├── archives/
 │   ├── v1/              1re maquette (une seule page)
 │   └── v2/              2e maquette (une seule page, inspirée de GELPAZ et Digital Station)
+├── outils/              scripts de génération des pages et textes sources (voir CLAUDE.md)
 ├── ANALYSE.md           analyse du site actuel, choix de conception, recherches, contenus à fournir
+├── CLAUDE.md            passation : tout ce qu'un nouvel agent doit savoir pour reprendre le projet
 └── README.md
 ```
 
-> L'**en-tête** (barre d'information et menu) et le **pied de page** sont copiés à l'identique dans chacune des 8 pages. Toute modification du menu, du téléphone ou de l'adresse doit être reportée dans **tous les fichiers `.html`**, y compris ceux du dossier `en/`. Un « Rechercher / Remplacer » dans le dossier suffit.
+> L'**en-tête** (barre d'information et menu) et le **pied de page** sont copiés à l'identique dans chacune des 8 pages. Toute modification du menu, du téléphone ou de l'adresse doit être reportée dans **tous les fichiers `.html`**, y compris ceux du dossier `en/`. Le plus sûr est de modifier `index.html` et `en/index.html`, puis de régénérer les autres pages avec les scripts du dossier `outils/` (commandes dans `CLAUDE.md`).
 >
 > Toute modification de contenu faite sur une page française doit aussi être faite sur la page anglaise du même nom. Dans le formulaire de contact anglais, les options gardent leur valeur en français (`value="Commande de farines"`) : l'objet des e-mails reçus reste ainsi en français pour l'équipe.
 
@@ -141,7 +143,7 @@ Les couleurs reprennent le logo et les matières premières : la feuille, le ma�
 
 ## Mise en ligne
 
-C'est un site statique : il suffit de copier tous les fichiers (sauf `archives/` et `assets/originaux/`, inutiles en ligne), **y compris `.htaccess` et `.well-known/`**, chez n'importe quel hébergeur web. Par exemple :
+C'est un site statique : il suffit de copier tous les fichiers (sauf `archives/`, `assets/originaux/`, `outils/` et les fichiers `.md`, inutiles en ligne), **y compris `.htaccess` et `.well-known/`**, chez n'importe quel hébergeur web. Par exemple :
 - l'hébergement actuel de sodepalsa.com, en remplacement de WordPress ;
 - Netlify ou Cloudflare Pages, qui sont gratuits et se branchent sur ce dépôt GitHub ;
 - GitHub Pages, à condition que le dépôt soit public ou que le compte ait une offre payante.

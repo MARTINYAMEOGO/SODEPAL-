@@ -15,11 +15,12 @@ ServerSignature Off
 </IfModule>
 
 # ---------- Fichiers qui ne doivent jamais être publics ----------
-# Dépôt Git, réglages de l'éditeur, notes internes (.md), anciennes maquettes, photos d'origine
+# Dépôt Git, réglages de l'éditeur, notes internes (.md), anciennes maquettes, photos d'origine, outils de génération
 <IfModule mod_alias.c>
   RedirectMatch 404 /\.(?!well-known/)
   RedirectMatch 404 ^/archives/
   RedirectMatch 404 ^/assets/originaux/
+  RedirectMatch 404 ^/outils/
   RedirectMatch 404 \.(md|py|sh|bak|log|sql|zip)$
 </IfModule>
 
