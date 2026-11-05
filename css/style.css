@@ -456,9 +456,7 @@ a.ci:hover { transform: translateY(-3px); }
 
 /* ---------- Parcours (frise) ---------- */
 .timeline { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; position: relative; }
-.timeline::before { content: ""; position: absolute; left: 0; right: 0; top: 11px; height: 2px; background: linear-gradient(90deg, var(--leaf), var(--corn)); }
-.timeline li { position: relative; padding-top: 2.5rem; }
-.timeline li::before { content: ""; position: absolute; top: 0; left: 0; width: 24px; height: 24px; border-radius: 50%; background: var(--bg); border: 4px solid var(--primary); }
+.timeline li { position: relative; }
 .timeline .t-when { font: 800 1.9rem/1 var(--font-display); color: var(--primary); display: block; margin-bottom: .5rem; }
 .timeline h3 { font-size: 1.1rem; margin-bottom: .35rem; }
 .timeline p { color: var(--muted); font-size: .95rem; margin: 0; }
@@ -568,13 +566,10 @@ a.ci:hover { transform: translateY(-3px); }
 .founder-text > p { color: var(--muted); }
 
 .vtl { list-style: none; padding: 0; margin: 0 auto; max-width: 860px; position: relative; }
-.vtl::before { content: ""; position: absolute; left: 118px; top: .5rem; bottom: .5rem; width: 2px; background: linear-gradient(var(--leaf), var(--corn)); }
 .vtl li { display: grid; grid-template-columns: 100px 1fr; gap: 2.5rem; padding: 0 0 2rem; position: relative; }
-.vtl li::before { content: ""; position: absolute; left: 111px; top: .35rem; width: 16px; height: 16px; border-radius: 50%; background: var(--bg); border: 3px solid var(--primary); }
 .vtl-when { font: 800 1.25rem/1.3 var(--font-display); color: var(--primary); text-align: right; }
 .vtl h3 { font-size: 1.1rem; margin-bottom: .3rem; }
 .vtl p { margin: 0; color: var(--muted); font-size: .96rem; }
-.section-tint .vtl li::before { background: var(--tint); }
 
 .orgs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 .org { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 1.25rem 1.35rem; }
@@ -663,10 +658,9 @@ a.ci:hover { transform: translateY(-3px); }
 /* ---------- Notre histoire (accueil) ---------- */
 .family { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
 .family-lead { font: 500 italic 1.2rem/1.55 var(--font-serif); color: var(--heading); }
-.family-steps { list-style: none; margin: 2rem 0 0; padding: 0; border-left: 2px solid var(--corn); }
-.family-steps li { position: relative; display: grid; grid-template-columns: 64px 1fr; gap: 1rem; padding: 0 0 1.25rem 1.5rem; }
+.family-steps { list-style: none; margin: 2rem 0 0; padding: 0; }
+.family-steps li { position: relative; display: grid; grid-template-columns: 64px 1fr; gap: 1rem; padding: 0 0 1.25rem; }
 .family-steps li:last-child { padding-bottom: 0; }
-.family-steps li::before { content: ""; position: absolute; left: -7px; top: .35rem; width: 12px; height: 12px; border-radius: 50%; background: var(--corn); box-shadow: 0 0 0 4px var(--tint); }
 .family-year { font: 500 1rem/1.5 var(--font-mono); color: var(--tag-millet-fg); }
 .family-steps p { margin: 0; }
 .family .leaders { grid-template-columns: 1fr; }
@@ -727,7 +721,6 @@ a.ci:hover { transform: translateY(-3px); }
 @media (max-width: 1100px) {
   .nav { gap: 1.1rem; }
   .timeline, .chain { grid-template-columns: repeat(2, 1fr); }
-  .timeline::before { display: none; }
   .chain li:nth-child(2)::after { display: none; }
   .team, .partners, .medals, .orgs, .news-grid { grid-template-columns: repeat(2, 1fr); }
   .leaders { grid-template-columns: 1fr; }
@@ -820,9 +813,7 @@ a.ci:hover { transform: translateY(-3px); }
   .timeline, .chain, .team, .partners, .medals, .orgs, .news-grid { grid-template-columns: 1fr; }
   .leader { grid-template-columns: 90px 1fr; gap: 1rem; padding: 1.1rem; }
   .slide-bg-stat::after { opacity: .5; }
-  .vtl::before { left: 7px; }
-  .vtl li { grid-template-columns: 1fr; gap: .2rem; padding-left: 2rem; }
-  .vtl li::before { left: 0; }
+  .vtl li { grid-template-columns: 1fr; gap: .2rem; }
   .vtl-when { text-align: left; }
   .chain li:not(:last-child)::after { content: "↓"; right: auto; left: 50%; top: auto; bottom: -1.05rem; transform: translateX(-50%); }
   .chain li:nth-child(2)::after { display: grid; }
