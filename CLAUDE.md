@@ -23,6 +23,7 @@ Dernière mise à jour : 5 novembre 2026.
 4. **Couleurs** : fond de page blanc `#FFFFFF`, sections alternées blanc grisé `#F4F5F3`, bordures `#E2E4E0`. Le reste est dans la charte du README.
 5. **Titre d'onglet** : « SODEPAL SA » seul sur toutes les pages. Le titre détaillé reste dans `og:title`.
 6. **E-mails** : `contact@sodepal.com` (général) et `y.zoundi@sodepal.com` (direction). Ne plus utiliser Yahoo.
+7. **Petits intitulés** (`.eyebrow`) : pas de tiret jaune devant, retiré à la demande de l'utilisateur.
 
 ## Règles de contenu
 
