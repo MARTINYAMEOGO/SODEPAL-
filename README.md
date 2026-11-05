@@ -89,7 +89,7 @@ Proposition de refonte du site de **SODEPAL SA** (Société d'exploitation des p
 Python est installé sur la plupart des postes. Depuis le dossier du projet :
 
 ```bash
-python -m http.server 8080
+python outils/serveur.py 8080 .
 ```
 
 Ouvrir ensuite http://localhost:8080.

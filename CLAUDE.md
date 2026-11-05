@@ -37,10 +37,10 @@ Dernière mise à jour : 5 novembre 2026.
 ## Lancer le site
 
 ```bash
-python -m http.server 8080
+python -I outils/serveur.py 8080 .
 ```
 
-Depuis le dossier du projet, puis ouvrir http://localhost:8080. Dans l'application Claude, le serveur `sodepal` existe déjà dans `.claude/launch.json` (fichier non versionné) : utiliser `preview_start` avec ce nom.
+Depuis le dossier du projet, puis ouvrir http://localhost:8080. Ce serveur interdit au navigateur de garder d'anciennes versions : l'utilisateur a longtemps vu un tiret déjà retiré à cause d'une page gardée en mémoire. Dans l'application Claude, le serveur `sodepal` existe déjà dans `.claude/launch.json` (fichier non versionné) : utiliser `preview_start` avec ce nom.
 
 Aperçu d'un temps fort avant sa date : `index.html?saison=noel` (aussi `ramadan`, `korite`, `tabaski`, `paques`, `careme`, `maouloud`, `nouvel-an`, `saint-valentin`, `femmes`, `rentree`).
 
@@ -143,5 +143,5 @@ Hébergement de la base, vente en ligne des farines infantiles, vente du Bessé 
 
 ## Autres points en suspens
 
-- Une version « v3 sobre » se trouve dans `Downloads\SODEPAL--main\SODEPAL--main`. Elle n'est pas sur GitHub et l'utilisateur n'a pas décidé s'il voulait l'importer. Il a choisi de continuer avec la version actuelle.
+- La version « v3 sobre » du dossier Téléchargements n'existe plus sur le poste (constaté le 5 novembre 2026). L'utilisateur a choisi de continuer avec la version actuelle.
 - Compromis proposé pour les titres d'onglet (« Produits · SODEPAL SA » sur les pages intérieures) : sans réponse. Ne pas l'appliquer sans demande.
