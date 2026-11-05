@@ -8,6 +8,9 @@ from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 class SansCache(SimpleHTTPRequestHandler):
     def end_headers(self):
         self.send_header('Cache-Control', 'no-store')
+        # Efface aussi les anciennes pages déjà gardées par le navigateur
+        if self.path.split('?')[0].endswith(('/', '.html')):
+            self.send_header('Clear-Site-Data', '"cache"')
         super().end_headers()
 
 
