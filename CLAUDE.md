@@ -82,6 +82,7 @@ python -I outils/links.py . && python -I outils/links.py en
 - **Animations** : n'animer que `transform` et `opacity`. Les animations de `box-shadow` ou `width` ont rendu le site lent.
 - **Images** : WebP, 900 px de large au plus. Le logo affiché est `logo-sodepal.webp` (8 Ko). `logo-sodepal.png` ne sert que pour les aperçus et les données structurées.
 - **Petits écrans** : tester à 320 et 375 px. Sur mobile, un débordement agrandit `innerWidth` : comparer sa valeur à la largeur prévue, pas seulement à `scrollWidth`.
+- **Version des fichiers** : `css/style.css`, `js/main.js` et `js/saisons.js` sont appelés avec `?v=AAAAMMJJ` dans `index.html` et `en/index.html`. Après toute modification de ces fichiers, changer ce numéro et régénérer, sinon les navigateurs gardent l'ancienne version (une semaine en ligne, à cause de `.htaccess`).
 - **Navigateur intégré** : il garde les fichiers en cache. Forcer avec `fetch(url, {cache: 'reload'})` puis recharger. Masqué, il ralentit `requestAnimationFrame` : ne pas y mesurer la fluidité. Son journal de console garde d'anciens messages d'une page à l'autre.
 - **Dates lunaires** : Ramadan, Korité, Tabaski et Maouloud sont saisis à la main dans `js/saisons.js` jusqu'en 2028, avec des dates indicatives. Les ajuster à chaque annonce officielle.
 - **Fichiers à ne pas publier** : `archives/`, `assets/originaux/`, `outils/` et les `.md`. `.htaccess` les bloque, mais il vaut mieux ne pas les envoyer.
