@@ -85,7 +85,6 @@ svg { flex: none; }
   display: inline-flex; align-items: center; gap: .7rem; margin: 0 0 1rem;
   font: 500 .78rem/1.2 var(--font-mono); letter-spacing: .16em; text-transform: uppercase; color: var(--millet);
 }
-.eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--corn); border-radius: 2px; }
 :root[data-theme="dark"] .eyebrow { color: var(--corn); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .eyebrow { color: var(--corn); } }
 .eyebrow-light, :root .eyebrow-light { color: var(--corn); }

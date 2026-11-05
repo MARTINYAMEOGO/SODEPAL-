@@ -49,7 +49,7 @@ Proposition de refonte du site de **SODEPAL SA** (Société d'exploitation des p
 - **Catalogue filtrable**, avec un lien direct vers une gamme : `produits.html#farines`, `#biscuits`, `#patisserie`, `#boissons`, `#specialites`.
 - **Formulaire de contact** qui ouvre la messagerie du visiteur avec le message déjà rédigé. L'objet peut être pré-rempli par l'adresse, par exemple `contact.html?sujet=Devenir%20revendeur`.
 - **Indicateur « Ouvert / Fermé »** en direct, calculé à l'heure de Ouagadougou.
-- **Compteurs animés**, apparitions au défilement, barre de progression de lecture, bouton d'appel flottant, retour en haut.
+- **Compteurs animés**, apparitions au défilement, bouton d'appel flottant, retour en haut.
 - **Référencement** : titre et description propres à chaque page, aperçu pour les réseaux sociaux (Open Graph), données structurées schema.org sur l'accueil, textes alternatifs sur toutes les images.
 - **Accessibilité** : lien « Aller au contenu », navigation au clavier, contour de focus visible, contrastes vérifiés.
 - **Performance** : moins de 1 Mo d'images en WebP pour tout le site (contre 5,8 Mo sur le site actuel), avec chargement différé. Logo de 8 Ko, une seule graisse pour la police italique, animations limitées à `transform` et `opacity` (elles ne redessinent pas la page), et animations du carrousel arrêtées quand il sort de l'écran.

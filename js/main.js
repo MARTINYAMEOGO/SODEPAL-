@@ -30,18 +30,15 @@
     syncThemeBtn();
   }
 
-  // ---------- En-tête, progression, retour en haut ----------
+  // ---------- En-tête, retour en haut ----------
   var header = $('.site-header');
-  var bar = $('.progress span');
   var toTop = $('.to-top');
   // Une seule mise à jour par image affichée, quel que soit le nombre d'événements de défilement
   var ticking = false;
   function onScroll() {
     ticking = false;
     var y = window.scrollY;
-    var max = document.documentElement.scrollHeight - window.innerHeight;
     header.classList.toggle('scrolled', y > 8);
-    if (bar) bar.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
     if (toTop) toTop.classList.toggle('show', y > 900);
   }
   window.addEventListener('scroll', function () {
