@@ -183,7 +183,6 @@ Le site WordPress actuel (sodepalsa.com) n'est pas concerné par ces protections
 
 La liste détaillée est dans [ANALYSE.md](ANALYSE.md). Les points principaux :
 
-- [ ] Retirer tous les encadrés jaunes **« À compléter »** ou **« Texte proposé »** (classe `todo-note`).
 - [ ] Photos officielles de **Simone Zoundi** et de **Yolande Alexise Zoundi**, puis de l'équipe.
 - [ ] Faire valider le **Mot de la Directrice générale**, qui est une proposition de texte.
 - [ ] Noms, photos et rôles des responsables de l'équipe, et logos des partenaires.

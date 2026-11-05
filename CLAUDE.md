@@ -27,8 +27,8 @@ Dernière mise à jour : 5 novembre 2026.
 
 ## Règles de contenu
 
-- **Ne rien inventer** sur l'entreprise ou les personnes. Un fait non vérifié porte un badge « À confirmer » ou un encadré `todo-note`.
-- Le lien de parenté entre Simone Zoundi et Yolande Alexise Zoundi n'a pas été vérifié. Le site parle de « deux générations », jamais de « sa fille ».
+- **Ne rien inventer** sur l'entreprise ou les personnes. Un fait non vérifié porte un badge « À confirmer ». Les encadrés « À compléter » et « Texte proposé » ont été retirés à la demande de l'utilisateur : n'en remettre aucun, suivre ces points dans ce fichier.
+- Yolande Alexise Zoundi est la fille aînée de Simone Zoundi, d'après les recherches sur la fondatrice. Le site le dit sur les pages Fondatrice, Directrice et Société.
 - **Le Bessé est une liqueur** : ne jamais le mettre en avant pendant les fêtes musulmanes.
 - **Farines infantiles** : aucune promotion, réduction ni fidélité, à cause du décret de 2022 sur les aliments pour nourrissons (voir « Points légaux »).
 - Toute modification de contenu se fait **dans les deux langues**.
@@ -95,9 +95,9 @@ Tout dépend de l'utilisateur ou de SODEPAL. Dès qu'un élément arrive, l'int�
 
 - [ ] Numéro **WhatsApp**, pour remplacer le bouton d'appel flottant (`.fab-call`, dans le pied de `index.html` et `en/index.html`).
 - [ ] Photos de Simone Zoundi, de Yolande Alexise Zoundi et de l'équipe.
-- [ ] Validation du « Mot de la Directrice générale », qui est un texte proposé.
+- [ ] **Bloquant avant publication** : validation du « Mot de la Directrice générale ». C'est un texte proposé, rédigé sans Mme Zoundi, et plus rien ne le signale. Il est dans `outils/pages/directrice.html` (section `#mot`). Sa citation d'ouverture figure aussi dans `outils/pages/societe.html` (section `#mot-du-dg`). Idem en anglais.
 - [ ] Accord de la famille Zoundi pour les biographies.
-- [ ] Noms et rôles des responsables, logos des partenaires.
+- [ ] Noms et rôles des responsables, logos des partenaires. Les cartes « Nom et prénom » de la page Société sont encore visibles.
 - [ ] Capital social : 100 M FCFA sur le site actuel, 1 milliard dans la presse en 2025.
 - [ ] Année Ashoka et stèle de la Rue des Étoiles.
 - [ ] Fiches de Vita Soja, Koko Baga, Gonré rapide, biscuits au soja, poudre de baobab.
@@ -106,7 +106,6 @@ Tout dépend de l'utilisateur ou de SODEPAL. Dès qu'un élément arrive, l'int�
 - [ ] Horaires du samedi, mode de retrait ou de livraison.
 - [ ] Création des boîtes e-mail, choix du domaine (sodepal.com ou sodepalsa.com).
 - [ ] Relecture de l'anglais par un anglophone.
-- [ ] Retrait des encadrés `todo-note` juste avant la mise en ligne.
 
 Mise en ligne : voir le README. Ne rien publier sans l'accord explicite de l'utilisateur.
 

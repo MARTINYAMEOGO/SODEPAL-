@@ -505,9 +505,6 @@ a.ci:hover { transform: translateY(-3px); }
 .m-role { font-weight: 700; color: var(--primary); font-size: .95rem; margin-bottom: .6rem; }
 .m-body p:last-child { color: var(--muted); font-size: .92rem; margin: 0; }
 .placeholder-name { color: var(--muted); font-style: italic; font-weight: 600; }
-.todo-note { background: var(--tag-corn-bg); color: var(--tag-corn-fg); border-radius: var(--radius-sm); padding: 1rem 1.25rem; margin-bottom: 2rem; font-size: .92rem; }
-.todo-note strong { margin-right: .35rem; }
-.todo-note code { font-family: var(--font-mono); font-size: .85em; word-break: break-all; }
 
 /* ---------- Partenaires ---------- */
 .partners { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
@@ -546,7 +543,6 @@ a.ci:hover { transform: translateY(-3px); }
 .dg blockquote p:not(.dg-lead) { color: rgba(255, 255, 255, .78); }
 .section-dark .article p { color: rgba(255, 255, 255, .78); }
 .section-dark .article .dg-lead { color: #fff; }
-.todo-dark { background: rgba(242, 182, 50, .12); color: var(--corn); margin: 1.5rem 0 0; }
 
 /* ---------- Divers ---------- */
 .btn-ghost { background: transparent; color: var(--primary); }
