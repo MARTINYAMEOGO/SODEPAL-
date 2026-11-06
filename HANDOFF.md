@@ -43,7 +43,7 @@ Finaliser le site vitrine bilingue pour le publier. L'utilisateur l'améliore pa
 
 ## Journal
 
-- 06/11/2026 : signature e-mail dans `outils/signature-email.html` : texte gris, couleur réservée au logo, à la demande de l'utilisateur, qui préfère le modèle 1. Le logo (`assets/img/logo-signature.png`) y est en lien local : à remplacer par une adresse en ligne avant usage. Non testée dans Gmail ni Outlook.
+- 06/11/2026 : signature e-mail préparée à part, hors du site, dans le dossier `Signature SODEPAL` du Bureau, à la demande de l'utilisateur. Ne pas la remettre dans ce dépôt.
 - 06/11/2026 : parcours de la Fondatrice et de la Directrice en arbre, après un essai en cartes refusé ; carte 4 de la chaîne des acteurs en vert foncé ; création de ce fichier.
 - 05/11/2026 : cahier des charges, passation `CLAUDE.md`, outils versionnés dans `outils/`, retrait des encadrés et de tous les traits décoratifs, nouvelles citations et chiffres clés, serveur local sans mémoire.
 - 27/10/2026 : titre d'onglet réduit à « SODEPAL SA ».
