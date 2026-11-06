@@ -23,9 +23,9 @@ Dernière mise à jour : 6 novembre 2026. L'état du moment et le journal sont d
 4. **Couleurs** : fond de page blanc `#FFFFFF`, sections alternées blanc grisé `#F4F5F3`, bordures `#E2E4E0`. Le reste est dans la charte du README.
 5. **Titre d'onglet** : « SODEPAL SA » seul sur toutes les pages. Le titre détaillé reste dans `og:title`.
 6. **E-mails** : `contact@sodepal.com` (général) et `y.zoundi@sodepal.com` (direction). Ne plus utiliser Yahoo.
-7. **Aucun tiret décoratif** : pas de tiret devant les petits intitulés (`.eyebrow`), pas de soulignement jaune dans le menu ni sous les liens « → », pas de bande colorée en haut des cartes, pas de pointillés entre les étapes, pas de barre de progression en haut de page, pas de ligne ni de points dans les frises chronologiques. Restent seulement les commandes du carrousel.
+7. **Aucun tiret décoratif** : pas de tiret devant les petits intitulés (`.eyebrow`), pas de soulignement jaune dans le menu ni sous les liens « → », pas de bande colorée en haut des cartes, pas de pointillés entre les étapes, pas de barre de progression en haut de page, pas de ligne ni de points dans la frise de la page Société ni dans celle de l'accueil. Restent seulement les commandes du carrousel et l'arbre décrit à la règle 9.
 8. **Citations et chiffres** : pas de bande jaune à gauche. Les citations sont sur un fond vert pâle (`.news-quote`, `.founder-quote`), les chiffres clés d'un article sont des cartes (`.facts`).
-9. **Frises** : présentées en cartes (`.vtl`), la date en grand, trois par ligne sur ordinateur. Le moment clé est en vert foncé (`.is-key`), comme la création de SODEPAL en 1991.
+9. **Parcours en arbre** (`.vtl`, pages Fondatrice et Directrice) : demandé par l'utilisateur à la place des cartes. Tronc central brun, une branche et une feuille verte par étape, à gauche puis à droite ; sur téléphone, tronc à gauche. Ne pas toucher au tronc ni aux branches au nom de la règle 7.
 
 ## Règles de contenu
 

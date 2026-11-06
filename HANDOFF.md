@@ -19,11 +19,11 @@ Finaliser le site vitrine bilingue pour le publier. L'utilisateur l'améliore pa
 3. Décider du sort des emplacements vides, jamais tranché par l'utilisateur :
    - cartes « Nom et prénom » de la page Société ;
    - cartes vides des distinctions ;
-   - cartes « Formation » et « Année » de la frise de la page Directrice.
+   - étapes « Formation » et « Année » de l'arbre de la page Directrice.
 
 ## Vérifié
 
-- Frise en cartes : Fondatrice et Directrice sur grand écran, Fondatrice en anglais à 375 px. Pas de débordement.
+- Parcours en arbre : Fondatrice (français et anglais) et Directrice sur grand écran, sans chevauchement de texte ; Fondatrice à 375 px, sans débordement.
 - Liens internes : `erreurs: 0` dans les deux langues.
 - Tirets décoratifs : aucun sur les pages contrôlées. Toutes les pages partagent le même style.
 
@@ -43,7 +43,7 @@ Finaliser le site vitrine bilingue pour le publier. L'utilisateur l'améliore pa
 
 ## Journal
 
-- 06/11/2026 : frise de la Fondatrice et de la Directrice refaite en cartes ; carte 4 de la chaîne des acteurs en vert foncé ; création de ce fichier.
+- 06/11/2026 : parcours de la Fondatrice et de la Directrice en arbre, après un essai en cartes refusé ; carte 4 de la chaîne des acteurs en vert foncé ; création de ce fichier.
 - 05/11/2026 : cahier des charges, passation `CLAUDE.md`, outils versionnés dans `outils/`, retrait des encadrés et de tous les traits décoratifs, nouvelles citations et chiffres clés, serveur local sans mémoire.
 - 27/10/2026 : titre d'onglet réduit à « SODEPAL SA ».
 - 26/10/2026 : fonds blancs, accueil enrichi, temps forts, version anglaise, vitesse, sécurité.
