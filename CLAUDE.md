@@ -2,7 +2,7 @@
 
 Ce fichier permet à un nouvel agent de reprendre le projet sans l'historique des conversations. Il est lu automatiquement par Claude Code. À tenir à jour à la fin de chaque tâche.
 
-Dernière mise à jour : 5 novembre 2026.
+Dernière mise à jour : 6 novembre 2026. L'état du moment et le journal sont dans `HANDOFF.md`.
 
 ## En bref
 
@@ -25,6 +25,7 @@ Dernière mise à jour : 5 novembre 2026.
 6. **E-mails** : `contact@sodepal.com` (général) et `y.zoundi@sodepal.com` (direction). Ne plus utiliser Yahoo.
 7. **Aucun tiret décoratif** : pas de tiret devant les petits intitulés (`.eyebrow`), pas de soulignement jaune dans le menu ni sous les liens « → », pas de bande colorée en haut des cartes, pas de pointillés entre les étapes, pas de barre de progression en haut de page, pas de ligne ni de points dans les frises chronologiques. Restent seulement les commandes du carrousel.
 8. **Citations et chiffres** : pas de bande jaune à gauche. Les citations sont sur un fond vert pâle (`.news-quote`, `.founder-quote`), les chiffres clés d'un article sont des cartes (`.facts`).
+9. **Frises** : présentées en cartes (`.vtl`), la date en grand, trois par ligne sur ordinateur. Le moment clé est en vert foncé (`.is-key`), comme la création de SODEPAL en 1991.
 
 ## Règles de contenu
 
