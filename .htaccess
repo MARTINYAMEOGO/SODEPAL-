@@ -28,7 +28,7 @@ ServerSignature Off
 <IfModule mod_headers.c>
   # Ressources autorisées : le site lui-même, Google Fonts et la carte Google (page Contact).
   # frame-ancestors empêche d'afficher le site dans le cadre d'un autre site (clickjacking).
-  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'sha256-MTEEXbNExdr9AhDRRspBK4SX+36P5CUIj0HhfWTKv5A='; style-src 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://www.google.com; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-MTEEXbNExdr9AhDRRspBK4SX+36P5CUIj0HhfWTKv5A='; style-src 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; frame-src https://www.google.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
   Header always set X-Frame-Options "DENY"
   Header always set X-Content-Type-Options "nosniff"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"

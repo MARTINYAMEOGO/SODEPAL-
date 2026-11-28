@@ -1,6 +1,6 @@
 # HANDOFF — Site SODEPAL SA
 
-Mis à jour le 6 novembre 2026. Le détail du projet (règles, fabrication des pages, pièges, lots de la boutique, points légaux) est dans `CLAUDE.md`.
+Mis à jour le 28 novembre 2026. Le détail du projet (règles, fabrication des pages, pièges, lots de la boutique, points légaux) est dans `CLAUDE.md`.
 
 ## Objectif en cours
 
@@ -8,12 +8,14 @@ Finaliser le site vitrine bilingue pour le publier. L'utilisateur l'améliore pa
 
 ## État actuel
 
-- Site complet dans le code : 8 pages en français, 8 en anglais. Il n'est pas en ligne.
+- Site complet dans le code : 8 pages en français, 8 en anglais. Il est publié en test sur GitHub Pages (https://martinyameogo.github.io/SODEPAL-/) par `.github/workflows/pages.yml`, qui ne publie que les fichiers du site. Le vrai domaine n'est pas branché.
+- Google Analytics 4 : code prêt (`js/analytics.js`, bandeau de consentement fr/en, domaines Google dans la CSP aux 4 endroits) mais **inactif** : l'identifiant de mesure `G-XXXXXXXXXX` est à remplacer, en tête de `js/analytics.js`, par celui du flux GA4 de l'utilisateur. Puis changer le `?v=` et régénérer.
 - Tout est poussé sur GitHub, branche `main`. Aucun travail inachevé.
 - Boutique et administration : pas commencées, décrites dans le cahier des charges. Attendre le feu vert de l'utilisateur.
 
 ## Reste à faire
 
+0. Obtenir l'identifiant GA4 (`G-…`) et le mettre dans `js/analytics.js`. Faire valider par la CIL le transfert de données vers Google (art. 31).
 1. Attendre les contenus de SODEPAL, listés dans `CLAUDE.md` (« Ce qui reste à faire »). Le numéro WhatsApp manque toujours.
 2. Avant publication, faire valider le « Mot de la Directrice générale », qui est un texte proposé.
 3. Décider du sort des emplacements vides, jamais tranché par l'utilisateur :
@@ -29,6 +31,7 @@ Finaliser le site vitrine bilingue pour le publier. L'utilisateur l'améliore pa
 
 ## Non vérifié
 
+- Le bandeau de cookies et le chargement de GA4 : seule la syntaxe du script a été contrôlée, le navigateur d'aperçu était refusé. À tester avec un vrai identifiant.
 - La fluidité réelle sur téléphone : le navigateur intégré masqué ne permet pas de la mesurer.
 - Le rendu de `.htaccess` et `_headers` chez un vrai hébergeur.
 - L'anglais n'a pas été relu par un anglophone.
@@ -43,6 +46,7 @@ Finaliser le site vitrine bilingue pour le publier. L'utilisateur l'améliore pa
 
 ## Journal
 
+- 28/11/2026 : mise en ligne de test sur GitHub Pages (workflow) ; mesure d'audience GA4 préparée avec bandeau de consentement, en attente de l'identifiant ; `.claude/launch.json` corrigé (ancien chemin).
 - 06/11/2026 : signature e-mail préparée à part, hors du site, dans le dossier `Signature SODEPAL` du Bureau, à la demande de l'utilisateur. Ne pas la remettre dans ce dépôt.
 - 06/11/2026 : parcours de la Fondatrice et de la Directrice en arbre, après un essai en cartes refusé ; carte 4 de la chaîne des acteurs en vert foncé ; création de ce fichier.
 - 05/11/2026 : cahier des charges, passation `CLAUDE.md`, outils versionnés dans `outils/`, retrait des encadrés et de tous les traits décoratifs, nouvelles citations et chiffres clés, serveur local sans mémoire.

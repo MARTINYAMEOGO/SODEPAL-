@@ -845,3 +845,9 @@ a.ci:hover { transform: translateY(-3px); }
   .topbar-links { display: none; }
   .topbar-inner { justify-content: flex-end; }
 }
+
+/* ---------- Bandeau de consentement aux cookies ---------- */
+.cookie-banner { position: fixed; left: 1rem; right: 1rem; bottom: 1rem; z-index: 200; max-width: 720px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1rem; padding: 1rem 1.25rem; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow-lg); }
+.cookie-banner p { flex: 1 1 280px; margin: 0; font-size: .92rem; line-height: 1.5; }
+.cookie-banner .btn { padding: .55rem 1.1rem; font-size: .92rem; }
+.cookie-link { background: none; border: 0; padding: 0; font: inherit; color: inherit; text-decoration: underline; cursor: pointer; }
