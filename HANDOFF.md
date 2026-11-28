@@ -46,6 +46,7 @@ Finaliser le site vitrine bilingue pour le publier. L'utilisateur l'améliore pa
 
 ## Journal
 
+- 28/11/2026 : décision de l'utilisateur sur les domaines : sodepal.bf (identité burkinabè + messagerie pro) et sodepal.com (international), redirection vers un seul site ; messagerie au choix de la direction (classique ou Microsoft 365). Document technique client rédigé dans Claude Docs (https://claude.ai/artifact/DWUN2UyErWhVjFzcm9jHny), facture à suivre, puis communication sur les réseaux sociaux. Le site devra alors utiliser le nouveau domaine (canonical, og:url, e-mails `contact@`).
 - 28/11/2026 : mise en ligne de test sur GitHub Pages (workflow) ; mesure d'audience GA4 préparée avec bandeau de consentement, en attente de l'identifiant ; `.claude/launch.json` corrigé (ancien chemin).
 - 06/11/2026 : signature e-mail préparée à part, hors du site, dans le dossier `Signature SODEPAL` du Bureau, à la demande de l'utilisateur. Ne pas la remettre dans ce dépôt.
 - 06/11/2026 : parcours de la Fondatrice et de la Directrice en arbre, après un essai en cartes refusé ; carte 4 de la chaîne des acteurs en vert foncé ; création de ce fichier.
